@@ -1,5 +1,6 @@
 import { NestFactory } from '@nestjs/core';
 import { AppModule } from './app.module';
+import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger';
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
@@ -18,5 +19,7 @@ async function bootstrap() {
   // 3. monta o Swagger na rota '/api'
   SwaggerModule.setup('api', app, document);
 
+  await app.listen(process.env.PORT ?? 3000); // inicializa o app na porta 3000
+  // o uso de "??" é o nullish coalescing operator - se não tiver valor no .env, insere 3000
 }
 bootstrap();
