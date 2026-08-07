@@ -16,8 +16,8 @@ async function bootstrap() {
   // 2. gera o documento
   const document = SwaggerModule.createDocument(app, config);
   
-  // 3. monta o Swagger na rota '/api'
-  SwaggerModule.setup('api', app, document);
+  // 3. monta o Swagger na rota '/swagger'
+  SwaggerModule.setup('swagger', app, document);
 
   await app.listen(process.env.PORT ?? 3000); // inicializa o app na porta 3000
   // o uso de "??" é o nullish coalescing operator - se não tiver valor no .env, insere 3000
