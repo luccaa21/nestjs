@@ -1,9 +1,10 @@
 import { Module } from '@nestjs/common';
 import { UsersModule } from './users/users.module';
 import { ProfilesModule } from './profiles/profiles.module';
+import { PlanModule } from './plan/plan.module';
 
 @Module({
-  imports: [UsersModule, ProfilesModule], //conectar sub modulos
+  imports: [UsersModule, ProfilesModule, PlanModule], //conectar sub modulos
   controllers: [],
   providers: [],
 })
