@@ -1,0 +1,53 @@
+@baseUrl = http://localhost:3000/api/plan
+
+### 1. Cadastrar Plano Básico
+POST {{baseUrl}}
+Content-Type: application/json
+
+{
+  "name": "Básico",
+  "price": 30
+}
+
+### 1. Cadastrar Plano Pro
+POST {{baseUrl}}
+Content-Type: application/json
+
+{
+  "name": "Pro",
+  "price": 60
+}
+
+### 1. Cadastrar Plano Premium
+POST {{baseUrl}}
+Content-Type: application/json
+
+{
+  "name": "Premium",
+  "price": 100
+}
+
+### 2. Listar todos os planos
+GET {{baseUrl}}
+
+### 3. Consultar um plano pelo ID
+# Atenção: Substitua "1" pelo ID real gerado no banco de dados
+GET {{baseUrl}}/1
+
+### 4. Atualizar os dados de um plano
+# Atenção: Substitua "1" pelo ID real gerado no banco de dados
+PUT {{baseUrl}}/1
+Content-Type: application/json
+
+{
+  "name": "Básico Anual",
+  "price": 25
+}
+
+### 5. Excluir um plano
+# Atenção: Substitua "1" pelo ID real do plano Pro ou Premium
+DELETE {{baseUrl}}/3
+
+### 6. Listar todos os planos novamente (Verificação)
+# Deve retornar a lista sem o plano que foi excluído no passo anterior
+GET {{baseUrl}}
