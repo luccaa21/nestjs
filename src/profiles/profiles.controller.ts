@@ -7,9 +7,9 @@ import {
     Body,
     ParseIntPipe,
 } from '@nestjs/common';
-import { UpdateProfileDto } from 'src/dtos/update-profile-dto';
+import { UpdateProfileDto } from 'src/dtos/profile/update-profile-dto';
 import { ProfilesService } from './profiles.service';
-import { CreateProfileDto } from 'src/dtos/create-profile-dto';
+import { CreateProfileDto } from 'src/dtos/profile/create-profile-dto';
 @Controller('profiles')
 export class ProfilesController {
 
