@@ -8,6 +8,7 @@ async function bootstrap() {
   
   // mantendo o prefixo e as validações
   app.setGlobalPrefix('api');
+  app.enableCors();
   app.useGlobalPipes(new ValidationPipe());
 
   // configuração do Swagger
